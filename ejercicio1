@@ -1,0 +1,31 @@
+Program main;
+var
+i,j,k:integer;
+fila:array[1..19] of integer;
+
+begin
+     for i:=1 to 10 do
+     begin
+          k:=0;
+          for j:=0 to (i-1) do
+          begin
+               fila[k] := (i+j) mod 10;
+               k:=k+1;
+          end;
+          for j:=(i-2) downto 0 do
+          begin
+               fila[k] := (i+j) mod 10;
+               k:=k+1;
+          end;
+          for j := 1 to (10-i) do
+          begin	9
+               write(' ');
+          end;
+          for j := 0 to (k-1) do
+          begin
+               write(fila[j]);
+          end;
+          writeln;
+     end;
+     readln;
+end.
