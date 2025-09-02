@@ -1,0 +1,86 @@
+program Hello;
+
+var 
+    numeroDecimal: integer;
+    numerosRomanos: string;
+
+begin
+    numeroDecimal := 1789; 
+    numerosRomanos := '';
+    while numeroDecimal > 0 do 
+    begin 
+        
+        if numeroDecimal >= 1000 then
+        begin 
+            numerosRomanos := numerosRomanos + 'M';
+            numeroDecimal := numeroDecimal - 1000;
+        end
+        else if numeroDecimal >= 900 then 
+        begin 
+            numerosRomanos := numerosRomanos + 'CM';
+            numeroDecimal := numeroDecimal - 900;
+        end
+        else if numeroDecimal >= 500 then 
+        begin 
+            numerosRomanos := numerosRomanos + 'D';
+            numeroDecimal := numeroDecimal - 500;
+        end
+        else if numeroDecimal >= 400 then 
+        begin 
+            numerosRomanos := numerosRomanos + 'CD';
+            numeroDecimal := numeroDecimal - 400;
+        end
+        else if numeroDecimal >= 100 then 
+        begin 
+            numerosRomanos := numerosRomanos + 'C';
+            numeroDecimal := numeroDecimal - 100;
+        end
+        else if numeroDecimal >= 90 then 
+        begin 
+            numerosRomanos := numerosRomanos + 'XC';
+            numeroDecimal := numeroDecimal - 90;
+        end
+        else if numeroDecimal >= 50 then 
+        begin 
+            numerosRomanos := numerosRomanos + 'L';
+            numeroDecimal := numeroDecimal - 50;
+        end
+        else if numeroDecimal >= 40 then 
+        begin 
+            numerosRomanos := numerosRomanos + 'XL';
+            numeroDecimal := numeroDecimal - 40;
+        end
+        else if numeroDecimal >= 10 then 
+        begin 
+            numerosRomanos := numerosRomanos + 'X';
+            numeroDecimal := numeroDecimal - 10;
+        end
+        else if numeroDecimal >= 9 then 
+        begin 
+            numerosRomanos := numerosRomanos + 'IX';
+            numeroDecimal := numeroDecimal - 9;
+        end
+        else if numeroDecimal >= 5 then 
+        begin 
+            numerosRomanos := numerosRomanos + 'V';
+            numeroDecimal := numeroDecimal - 5;
+        end
+        else if numeroDecimal >= 4 then 
+        begin 
+            numerosRomanos := numerosRomanos + 'IV';
+            numeroDecimal := numeroDecimal - 4;
+        end
+        else if numeroDecimal >= 1 then 
+        begin 
+            numerosRomanos := numerosRomanos + '1';
+            numeroDecimal := numeroDecimal - 1;
+        end
+        
+    end;
+    writeln (numerosRomanos);
+    
+end.
+
+
+
+
