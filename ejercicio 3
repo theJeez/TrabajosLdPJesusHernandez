@@ -1,0 +1,32 @@
+program eje3;
+
+uses Crt; 
+
+var
+  i, j,ancho,asteriscos,espacios: integer;             
+
+begin
+  ancho := 64;
+
+  asteriscos := 2;
+
+  for i := 1 to 6 do
+  begin
+    espacios := (ancho - asteriscos) div 2;
+
+    for j := 1 to espacios do
+    begin
+      Write(' ');
+    end;
+
+    for j := 1 to asteriscos do
+    begin
+      Write('*');
+    end;
+
+    Writeln;
+
+    asteriscos := asteriscos * 2;
+  end;
+
+end.
